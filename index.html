@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>CT Homestay Kelantan - Pantai Nami, Bachok Kelantan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'coastal-teal': '#2B616D',
+                        'sand-beige': '#F4F1EA',
+                        'coral': '#FF6B6B',
+                        'seafoam': '#88C9BF'
+                    },
+                    transitionDuration: {
+                        '400': '400ms'
+                    }
+                }
+            }
+        }
+    </script>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+</head>
+
+<body class="bg-sand-beige">
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <span class="text-xl md:text-2xl font-bold text-coastal-teal">CT Homestay Kelantan</span>
+                </div>
+                <div class="md:hidden">
+                    <button id="menuBtn" class="text-coastal-teal focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div id="menuItems" class="hidden md:flex items-center">
+                    <a href="#gallery"
+                        class="block px-4 py-2 text-gray-600 hover:text-seafoam transition-colors">Gallery</a>
+                    <a href="#amenities"
+                        class="block px-4 py-2 text-gray-600 hover:text-seafoam transition-colors">Amenities</a>
+                    <a href="#contact"
+                        class="block px-4 py-2 text-gray-600 hover:text-seafoam transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div
+        class="relative h-[80vh] min-h-[400px] bg-[url('https://media.ohbulan.com/wp-content/uploads/2016/02/pantai-senok-1-630x418.jpg')] bg-cover bg-center mt-16">
+        <div class="absolute inset-0 bg-coastal-teal opacity-75"></div>
+        <div class="relative h-full flex items-center">
+            <div class="max-w-7xl mx-auto px-4 w-full">
+                <div class="max-w-2xl">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        Seaside Serenity: Your Beachfront Retreat
+                    </h1>
+                    <div class="bg-white p-4 md:p-6 rounded-lg shadow-xl">
+                        <form id="availabilityForm" class="flex flex-col md:flex-row gap-4 items-end">
+                            <div class="flex-1 w-full">
+                                <label class="block text-coastal-teal font-medium mb-2">Check-in Date</label>
+                                <input type="date" id="checkin" required
+                                    class="w-full p-2 md:p-3 border-2 border-sand-beige rounded-lg focus:border-seafoam focus:ring-seafoam text-coastal-teal">
+                            </div>
+                            <div class="flex-1 w-full">
+                                <label class="block text-coastal-teal font-medium mb-2">Check-out Date</label>
+                                <input type="date" id="checkout" required
+                                    class="w-full p-2 md:p-3 border-2 border-sand-beige rounded-lg focus:border-seafoam focus:ring-seafoam text-coastal-teal">
+                            </div>
+                            <button type="submit"
+                                class="w-full md:w-auto bg-coral text-white px-6 py-2 md:px-8 md:py-3 rounded-lg hover:bg-coastal-teal transition-colors font-semibold">
+                                Check Availability
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="amenities" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-coastal-teal">Our Coastal Comforts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 hover:bg-sand-beige rounded-xl transition-colors">
+                    <div class="text-4xl mb-4 text-seafoam">🏠</div>
+                    <h3 class="text-xl font-semibold mb-2 text-coastal-teal">3 Bedrooms</h3>
+                    <p class="text-gray-600">Air-conditioned comfort with premium bedding</p>
+                </div>
+
+                <div class="text-center p-6 hover:bg-sand-beige rounded-xl transition-colors">
+                    <div class="text-4xl mb-4 text-seafoam">🍴</div>
+                    <h3 class="text-xl font-semibold mb-2 text-coastal-teal">Full Kitchen</h3>
+                    <p class="text-gray-600">Modern appliances & dining space for 6</p>
+                </div>
+                <div class="text-center p-6 hover:bg-sand-beige rounded-xl transition-colors">
+                    <div class="text-4xl mb-4 text-seafoam">🔥</div>
+                    <h3 class="text-xl font-semibold mb-2 text-coastal-teal">BBQ Set</h3>
+                    <p class="text-gray-600">Evening grill sessions by the beach</p>
+                </div>
+                <div class="text-center p-6 hover:bg-sand-beige rounded-xl transition-colors">
+                    <div class="text-4xl mb-4 text-seafoam">🏖️</div>
+                    <h3 class="text-xl font-semibold mb-2 text-coastal-teal">Beach Access</h3>
+                    <p class="text-gray-600">5-minute stroll to Pantai Nami</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-16 bg-sand-beige">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-coastal-teal">Discover Your Retreat</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://scontent.fkul18-2.fna.fbcdn.net/v/t39.30808-6/474541076_122227715306029434_3709792374573793440_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFeVLXy6uJTxqUmj9QB9LpzdmzK-EVkcWh2bMr4RWRxaI-8toCvRuHyg3Z9CG_nK7S_GJQMsKZ8L-4dJwPF8gJD&_nc_ohc=Kwau955PwroQ7kNvgFt943A&_nc_zt=23&_nc_ht=scontent.fkul18-2.fna&_nc_gid=ATuprTNfyLosLS6q67mFvfE&oh=00_AYCImJIBusSyUahbShtpk8Qb0oeiltd6ZtGw85ljXUteWw&oe=67A5ED31"
+                        alt="Living Room"
+                        class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white text-lg font-medium">Front View of Homestay</span>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://scontent.fkul18-1.fna.fbcdn.net/v/t39.30808-6/475854977_122229731834029434_1594431226544503415_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kQZNW73Nig4Q7kNvgEgI0CP&_nc_zt=23&_nc_ht=scontent.fkul18-1.fna&_nc_gid=A0SOIp81uqU27LVI-LPnXH5&oh=00_AYCoOFpezuXLVR31eGfih9JokkWMGI4R1bM8prpdAcU4IQ&oe=67A6188B"
+                        alt="Living Room"
+                        class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white text-lg font-medium">Spacious Living Area</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://scontent.fkul18-2.fna.fbcdn.net/v/t39.30808-6/475670220_122229368456029434_4505995939543527748_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=h4i634xIQmcQ7kNvgESxIoN&_nc_zt=23&_nc_ht=scontent.fkul18-2.fna&_nc_gid=Asow8B-nmB_nxhYhpvfasKF&oh=00_AYDjM5K3N3pndKVKTUoEUy8h2RhdRV-qAqaRhTOi1yz0Lw&oe=67A5FAE8"
+                        alt="Spacious Parking"
+                        class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white text-lg font-medium">Spacious Parking Area</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://scontent.fkul18-1.fna.fbcdn.net/v/t39.30808-6/474447084_122227715432029434_8131077849891599693_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF9qRXYKJLcy0uB-FIx_Nu3M1PUE0y45rkzU9QTTLjmueossAx0bVVBbR8kmYfBXWggyBu-5THhZY5OEel7rwVO&_nc_ohc=4_N6-bEqUJ4Q7kNvgFpKyiN&_nc_zt=23&_nc_ht=scontent.fkul18-1.fna&_nc_gid=A4u9pRxy5KRbTsof5_ybsBv&oh=00_AYDU3rSw7SutiecPmkEBWN8dmFJBgQBkBaAgE_jx7JaqbA&oe=67A5EEF5"
+                        alt="Bedroom"
+                        class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white text-lg font-medium">Cozy Bedroom</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://scontent.fkul18-1.fna.fbcdn.net/v/t39.30808-6/474367784_122227715474029434_1655802864166135588_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG97aa4T05KoVURvSTSrmqExyGBijni2fLHIYGKOeLZ8gl2gfJg0eHp2V9fUK3Fc9eb71zVNffX1AgrYveJp_IH&_nc_ohc=PNCGuRqHh8cQ7kNvgEpopCB&_nc_zt=23&_nc_ht=scontent.fkul18-1.fna&_nc_gid=AM4BsAaSJ8Ybyi_oP2ZC8Tp&oh=00_AYDkqlDcZfWRAmVqexiSKPLtm2wblRRDzMRkhyDsJM6y0g&oe=67A61A2C"
+                        alt="BBQ Area"
+                        class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white text-lg font-medium">Dining Room</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://scontent.fkul18-3.fna.fbcdn.net/v/t39.30808-6/476150074_122229731630029434_4263892114285964185_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFC8uChcDUzXdImM5i73ZluEDCqhjnElO4QMKqGOcSU7r44uWwSr7gCs6UW0ZcfMHVMDgkls_9WwM7KRx1kUVi1&_nc_ohc=BBYuFaZAK2kQ7kNvgEzRgO6&_nc_zt=23&_nc_ht=scontent.fkul18-3.fna&_nc_gid=AT04giZuYxTq40yX_NrWn-c&oh=00_AYDoUx2_3-Hyp1MZjeiz_8TJdOBGBzcbddqdpp9bFl2wlg&oe=67A60C17"
+                        alt="BBQ Area"
+                        class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white text-lg font-medium">BBQ Area</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-coastal-teal">Follow us on TIKTOK</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <blockquote class="tiktok-embed"
+                    cite="https://www.tiktok.com/@ct.homestay.kelan/video/7439977294581501202"
+                    data-video-id="7439977294581501202" style="max-width: 605px; min-width: 325px;">
+                    <section>Loading TikTok video...</section>
+                </blockquote>
+
+                <!-- TikTok Video 2 -->
+                <blockquote class="tiktok-embed"
+                    cite="https://www.tiktok.com/@ct.homestay.kelan/video/7458828609688505608"
+                    data-video-id="7458828609688505608" style="max-width: 605px; min-width: 325px;">
+                    <section>Loading TikTok video...</section>
+                </blockquote>
+                <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-xl overflow-hidden"></div>
+                <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-xl overflow-hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-sand-beige">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold text-coastal-teal">Get in Touch</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-seafoam p-3 rounded-lg">
+                                    📍
+                                </div>
+                                <p class="text-gray-600">Pantai Nami, Bachok Kelantan</p>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://api.whatsapp.com/send?phone=60193824699&text=homestay" target="_blank"
+                                    class="flex items-center space-x-4">
+                                    <div class="bg-seafoam p-3 rounded-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500"
+                                            fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2C6.48 2 2 6.48 2 12c0 2.11.66 4.07 1.78 5.69L2 22l4.51-1.19C8.07 21.34 9.99 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.74 0-3.36-.49-4.78-1.35L4 20l1.39-3.67C4.49 14.36 4 12.74 4 11c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8zm4.2-5.69c-.23-.12-1.34-.66-1.54-.73-.2-.07-.34-.12-.48.12-.14.23-.55.73-.67.88-.12.14-.25.16-.48.04-.23-.12-.96-.35-1.83-1.12-.67-.6-1.12-1.34-1.25-1.57-.13-.23-.01-.35.11-.48.11-.11.23-.3.35-.45.12-.15.17-.23.23-.38.06-.15.03-.28-.02-.39-.05-.11-.48-1.14-.66-1.56-.18-.42-.36-.36-.5-.37-.14-.01-.28-.01-.42-.01s-.39.05-.59.28c-.2.23-.78.76-.78 1.85s.8 2.15.91 2.3c.11.15 1.58 2.41 3.83 3.38 1.34.58 1.86.63 2.53.54.39-.06 1.34-.55 1.53-1.08.19-.53.19-.99.13-1.08-.06-.09-.19-.15-.42-.27z" />
+                                        </svg>
+                                    </div>
+                                    <p class="text-gray-600">WhatsApp</p>
+                                </a>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://www.facebook.com/cthomestaykb" target="_blank"
+                                    class="flex items-center space-x-4">
+                                    <div class="bg-seafoam p-3 rounded-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-600"
+                                            fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99h-2.54v-2.89h2.54V9.54c0-2.51 1.49-3.89 3.77-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.77l-.44 2.89h-2.33v6.99C18.34 21.13 22 16.99 22 12z" />
+                                        </svg>
+                                    </div>
+                                    <p class="text-gray-600">Facebook</p>
+                                </a>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://www.tiktok.com/@ct.homestay.kelan" target="_blank"
+                                    class="flex items-center space-x-4">
+                                    <div class="bg-seafoam p-3 rounded-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black"
+                                            fill="currentColor" viewBox="0 0 512 512">
+                                            <path
+                                                d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
+                                        </svg>
+                                    </div>
+                                    <p class="text-gray-600 font-semibold text-lg">TikTok</p>
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <iframe class="w-full h-96 rounded-lg" loading="lazy" allowfullscreen
+                            src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d413.46286602386255!2d102.31148128143869!3d6.114447383910293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d3.3237164!2d101.52778359999999!4m5!1s0x31b6b1ee992b1971%3A0xc10c9dc4888138f0!2sCT%20Homestay%20Kota%20Jembal%2C%20PT924%2C%20Kampung%20Kedai%20Lalat%2C%2016160%20Kota%20Bharu%2C%20Kelantan!3m2!1d6.114316199999999!2d102.3113784!5e0!3m2!1sen!2smy!4v1738551484799!5m2!1sen!2smy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-coastal-teal text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>© 2023 CT Homestay Kelantan. Find your coastal escape.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const menuItems = document.getElementById('menuItems');
+
+        menuBtn.addEventListener('click', () => {
+            menuItems.classList.toggle('hidden');
+            menuItems.classList.toggle('absolute');
+            menuItems.classList.toggle('top-full');
+            menuItems.classList.toggle('bg-white');
+            menuItems.classList.toggle('w-full');
+            menuItems.classList.toggle('left-0');
+            menuItems.classList.toggle('py-4');
+            menuItems.classList.toggle('shadow-md');
+        });
+
+        // WhatsApp integration
+        document.getElementById('availabilityForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+
+            if (!checkin || !checkout) {
+                alert('Please select both check-in and check-out dates');
+                return;
+            }
+
+            const message = `Hi CT Homestay Kelantan! I would like to check availability from ${checkin} to ${checkout}.`;
+            const encodedMessage = encodeURIComponent(message);
+            window.location.href = `https://api.whatsapp.com/send?phone=60193824699&text=${encodedMessage}`;
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
